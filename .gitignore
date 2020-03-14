@@ -1,0 +1,3 @@
+scovilleenv/
+*.pyc
+/requirements.txt
