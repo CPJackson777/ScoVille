@@ -1,15 +1,11 @@
 from django.db import models
+from django.urls import reverse
 
 class ScovilleScale(models.Model):
 
-    '''
-    *** This class creates a department and its properties ***
-   
-    Properties:
-      pepper_name: This property will contain the name of pepper for the scoville scale category.
-      heat_range: This property contains the numerical range of scoville heat units for the category.
-      img: This property will contain an image of the pepper that the category is named after.
-    '''
+    pepper_name = models.CharField(max_length=100)
+    heat_range = models.CharField(max_length=100)
+    image = models.FilePathField(path="/img")
 
     class Meta:
         verbose_name = ("ScovilleScale")
