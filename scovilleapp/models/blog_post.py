@@ -10,7 +10,7 @@ class BlogPost(models.Model):
     created_on = models.DateTimeField(auto_now_add=True)
     tolerance = models.CharField(max_length=100)
     image = models.FilePathField(path="/img")
-    video = image = models.CharField(max_length=255)
+    video = models.CharField(max_length=255)
     scoville_scale = models.ForeignKey("ScovilleScale", on_delete=models.CASCADE)
     profile_id = models.ForeignKey("Profile", on_delete=models.CASCADE)
 
