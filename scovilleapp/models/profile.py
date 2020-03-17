@@ -8,6 +8,8 @@ class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
    
 
+    def __str__(self):
+        return f"{self.first_name} {self.last_name}"
 
 # These receiver hooks allow you to continue to
 # work with the `User` class in your Python code.

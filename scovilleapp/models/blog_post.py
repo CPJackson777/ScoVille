@@ -1,7 +1,7 @@
 from django.db import models
 from django.urls import reverse
 from .scoville_scale import ScovilleScale
-from .user import User
+from .profile import Profile
 
 class BlogPost(models.Model):
 
@@ -11,8 +11,8 @@ class BlogPost(models.Model):
     tolerance = models.CharField(max_length=100)
     image = models.FilePathField(path="/img")
     video = image = models.CharField(max_length=255)
-    scoville_scale = models.ForeignKey(ScovilleScale, on_delete=models.CASCADE)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    scoville_scale = models.ForeignKey("ScovilleScale", on_delete=models.CASCADE)
+    profile_id = models.ForeignKey("Profile", on_delete=models.CASCADE)
 
     class Meta:
         verbose_name = ("BlogPost")
