@@ -1,10 +1,37 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'shared/base.html' %} {% endcomment %}
 
 {% block content %}
-  <h2>Sign up</h2>
-  <form method="post">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit">Sign up</button>
-  </form>
+    <h1>Register</h1>
+
+    <form action="{% url 'scovilleapp:register' %}" method="post">
+        <fieldset>
+            <label for="username">Username: </label>
+            <input id="username" type="text" name="username" value="admina">
+        </fieldset>
+
+        <fieldset>
+            <label for="first_name">First name: </label>
+            <input id="first_name" type="text" name="first_name" value="Admina">
+        </fieldset>
+
+        <fieldset>
+            <label for="last_name">Last name: </label>
+            <input id="last_name" type="text" name="last_name" value="Staytor">
+        </fieldset>
+
+
+        <fieldset>
+            <label for="email">Email: </label>
+            <input id="email" type="text" name="email" value="admin@admin.com">
+        </fieldset>
+
+        <fieldset>
+            <label for="password">Password: </label>
+            <input id="password" type="password" name="password" value="Admin8*">
+        </fieldset>
+
+        <input type="submit" value="Register" />
+
+    </form>
+
 {% endblock %}
