@@ -1,19 +1,36 @@
-scovilleenv
-/requirements.txt
-
-### Django ###
-*.log
-*.pot
-*.pyc
+# Byte-compiled / optimized / DLL files
 __pycache__/
+*.py[cod]
+*$py.class
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Django stuff:
+*.log
 local_settings.py
-db.sqlite3
-db.sqlite3-journal
-media
-img
+requirements.txt
+
+# pyenv
+.python-version
+
+# dotenv
+.env
+
+# virtualenv
+scovilleenv/
+.vscode
+
+.DS_Store
+*.sqlite3
+media/
+*.pyc
+*.db
+*.pid
 
 # django migrations
 migrations
 
 #db location
-hrapp/views/connection.py
+scovilleapp/views/connection.py
