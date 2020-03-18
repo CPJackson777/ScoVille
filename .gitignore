@@ -1,3 +1,19 @@
-scovilleenv/
-*.pyc
+scovilleenv
 /requirements.txt
+
+### Django ###
+*.log
+*.pot
+*.pyc
+__pycache__/
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media
+img
+
+# django migrations
+migrations
+
+#db location
+hrapp/views/connection.py
