@@ -1,1 +1,0 @@
-from .auth.logout import logout_user
