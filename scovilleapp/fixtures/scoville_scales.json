@@ -1,0 +1,51 @@
+[
+    {
+        "model": "scovilleapp.ScovilleScale",
+        "pk": 1,
+        "fields": {
+          "pepper_name": "Bell",
+          "heat_range": "100 - 500",
+          "image": "pythonlogo.png"
+        }
+      },
+    
+      {
+        "model": "scovilleapp.ScovilleScale",
+        "pk": 2,
+        "fields": {
+            "pepper_name": "Bell",
+            "heat_range": "100 - 500",
+            "image": "pythonlogo.png"
+        }
+      },
+    
+      {
+        "model": "scovilleapp.ScovilleScale",
+        "pk": 3,
+        "fields": {
+            "pepper_name": "Bell",
+            "heat_range": "100 - 500",
+            "image": "pythonlogo.png"
+        }
+      },
+
+      {
+        "model": "scovilleapp.ScovilleScale",
+        "pk": 4,
+        "fields": {
+            "pepper_name": "Bell",
+            "heat_range": "100 - 500",
+            "image": "pythonlogo.png"
+        }
+      },
+    
+      {
+        "model": "scovilleapp.ScovilleScale",
+        "pk": 5,
+        "fields": {
+            "pepper_name": "Bell",
+            "heat_range": "100 - 500",
+            "image": "pythonlogo.png"
+        }
+      }
+    ]
