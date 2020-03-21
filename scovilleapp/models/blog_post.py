@@ -12,7 +12,7 @@ class BlogPost(models.Model):
     image = models.FilePathField(path="/img", null=True)
     video = models.CharField(max_length=255, null=True)
     scoville_scale = models.ForeignKey("ScovilleScale", on_delete=models.CASCADE)
-    # profile_id = models.ForeignKey("Profile", on_delete=models.CASCADE)
+    profile_id = models.ForeignKey("Profile", on_delete=models.CASCADE, null=True)
 
     class Meta:
         verbose_name = ("BlogPost")

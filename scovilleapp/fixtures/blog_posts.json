@@ -8,7 +8,8 @@
           "created_on": null,
           "image": "pythonlogo.png",
           "video": "https://www.youtube.com",
-          "scoville_scale": "1"
+          "scoville_scale": 1,
+          "profile_id": 1
           
         }
       },
@@ -22,7 +23,8 @@
           "created_on": null,
           "image": "pythonlogo.png",
           "video": "https://www.youtube.com",
-          "scoville_scale": "2"
+          "scoville_scale": 2,
+          "profile_id": 1
           
         }
       }
