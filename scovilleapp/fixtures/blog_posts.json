@@ -1,0 +1,31 @@
+[
+    {
+        "model": "scovilleapp.BlogPost",
+        "pk": 1,
+        "fields": {
+          "title": "Bell",
+          "body": "100 - 500",
+          "created_on": null,
+          "image": "pythonlogo.png",
+          "video": "https://www.youtube.com",
+          "scoville_scale": 1,
+          "profile_id": 1
+          
+        }
+      },
+    
+      {
+        "model": "scovilleapp.BlogPost",
+        "pk": 2,
+        "fields": {
+          "title": "Bell",
+          "body": "100 - 500",
+          "created_on": null,
+          "image": "pythonlogo.png",
+          "video": "https://www.youtube.com",
+          "scoville_scale": 2,
+          "profile_id": 1
+          
+        }
+      }
+]
