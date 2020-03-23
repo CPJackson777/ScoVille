@@ -7,6 +7,7 @@ from .views import *
 app_name = "scovilleapp"
 
 urlpatterns = [
+   path('', home, name='home'),
    path('accounts/', include('django.contrib.auth.urls')),
    path('logout/', logout_user, name='logout'),
    path('register/', register_user, name='register'),
