@@ -8,13 +8,12 @@ from scovilleapp.models import model_factory
 def scovillescale_list(request):
     if request.method == 'GET':
         scale_list = ScovilleScale.objects.all()
-        print("John's test", scale_list)
 
         template = 'scoville_scale/sslist.html'
         context = {
             'scale_list': scale_list
         }
-        return render(request, 'scoville_scale/sslist.html', context)
+        return render(request, template, context)
 
 
 

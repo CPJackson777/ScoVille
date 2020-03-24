@@ -1,3 +1,4 @@
+{% comment %} {% extends 'shared/base.html' %} {% endcomment %}
 {% load static %}
 
 <!DOCTYPE html>
@@ -11,14 +12,16 @@
 
     <h1>Scoville Scale</h1>
 
-    <ol>
+    <ul>
     {% for scoville_scale in scale_list %}
         <li>
-            {% comment %} <a href="{% url 'libraryapp:book' book.id %}"> {{ book.title }} </a>
+            {% comment %} <a href="{% url 'scovilleapp:book' book.id %}"> {{ book.title }} </a>
     by {{book.author}} published in {{book.year}} {% endcomment %}
     {{scoville_scale.pepper_name}}
+    {{scoville_scale.heat_range}}
+    {{scoville_scale.image}}
         </li>
     {% endfor %}
-    </ol>
+    </ul>
   </body>
 </html>

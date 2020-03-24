@@ -1,0 +1,24 @@
+{% load static %}
+{% block content %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scoville Scale</title>
+  </head>
+  <body>
+    <nav id="site-nav">
+        <ul class="navList">
+            <li class="navList__route"><a href="{% url 'scovilleapp:home' %}">Home</a></li>
+            <li class="navList__route"><a href="{% url 'scovilleapp:scovillescale' %}">Property</a></li>
+            {% comment %} <li class="navList__route"><a href="{% url 'scovilleapp:blog_posts' %}">Neighborhoods</a></li> {% endcomment %}
+            <li class="navList__route"><a href="{% url 'scovilleapp:logout' %}">Log Out</a></li>
+        </ul>
+    </nav>
+    
+    <h1>Scoville Scale</h1>
+
+  </body>
+</html>
+{% endblock %}
