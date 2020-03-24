@@ -3,6 +3,8 @@ from .auth.register import register_user
 
 from .home import home
 
+from .scoville_scale.sslist import scovillescale_list
+
 # from .books.list import book_list
 # from .books.details import book_details
 # from .books.form import book_form, book_edit_form

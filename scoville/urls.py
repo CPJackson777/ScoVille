@@ -16,6 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import include, path
 from scovilleapp.models import * #This is needed so that Django knows about the location of your models.
+from scovilleapp.views import *
 
 
 urlpatterns = [

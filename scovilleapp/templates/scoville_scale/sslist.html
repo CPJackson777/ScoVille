@@ -1,0 +1,24 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Scoville Scale</title>
+  </head>
+  <body>
+    
+
+    <h1>Scoville Scale</h1>
+
+    <ol>
+    {% for scoville_scale in scale_list %}
+        <li>
+            {% comment %} <a href="{% url 'libraryapp:book' book.id %}"> {{ book.title }} </a>
+    by {{book.author}} published in {{book.year}} {% endcomment %}
+    {{scoville_scale.pepper_name}}
+        </li>
+    {% endfor %}
+    </ol>
+  </body>
+</html>

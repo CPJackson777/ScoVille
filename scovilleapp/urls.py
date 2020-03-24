@@ -11,4 +11,5 @@ urlpatterns = [
    path('accounts/', include('django.contrib.auth.urls')),
    path('logout/', logout_user, name='logout'),
    path('register/', register_user, name='register'),
+   path('scovillescale/', scovillescale_list, name='scovillescale') 
 ]

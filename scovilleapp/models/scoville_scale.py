@@ -12,7 +12,7 @@ class ScovilleScale(models.Model):
         verbose_name_plural = ("ScovilleScales")
 
     def __str__(self):
-        return self.name
+        return self.pepper_name
 
     def get_absolute_url(self):
         return reverse("ScovilleScale_detail", kwargs={"pk": self.pk})
