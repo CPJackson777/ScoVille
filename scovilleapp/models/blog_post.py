@@ -2,6 +2,7 @@ from django.db import models
 from django.urls import reverse
 from .scoville_scale import ScovilleScale
 from .profile import Profile
+from django.contrib.auth.models import User
 
 class BlogPost(models.Model):
 
@@ -14,12 +15,14 @@ class BlogPost(models.Model):
     scoville_scale = models.ForeignKey("ScovilleScale", on_delete=models.CASCADE)
     profile_id = models.ForeignKey("Profile", on_delete=models.CASCADE, null=True)
 
+    # class Meta:
+    #     verbose_name = ("BlogPost")
+    #     verbose_name_plural = ("BlogPosts")
     class Meta:
-        verbose_name = ("BlogPost")
-        verbose_name_plural = ("BlogPosts")
+        ordering = ['-created_on']
 
     def __str__(self):
-        return self.name
+        return self.title
 
     def get_absolute_url(self):
         return reverse("BlogPost_detail", kwargs={"pk": self.pk})
