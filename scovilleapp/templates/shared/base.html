@@ -1,24 +1,38 @@
 {% load static %}
-{% block content %}
 
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <meta charset="utf-8">
-    <title>Scoville Scale</title>
-  </head>
-  <body>
+    <title>Scoville</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
+
+    {% block css %}
+    {% endblock %}
+</head>
+
+<body>
+
+    <h1>Welcome to ScoVille</h1>
     <nav id="site-nav">
+        <img class="logo" src="{% static 'img/pythonlogo.png' %}" alt="Scoville logo">
         <ul class="navList">
-            <li class="navList__route"><a href="{% url 'scovilleapp:home' %}">Home</a></li>
-            <li class="navList__route"><a href="{% url 'scovilleapp:scovillescale' %}">Property</a></li>
-            {% comment %} <li class="navList__route"><a href="{% url 'scovilleapp:blog_posts' %}">Neighborhoods</a></li> {% endcomment %}
+            
             <li class="navList__route"><a href="{% url 'scovilleapp:logout' %}">Log Out</a></li>
+
         </ul>
     </nav>
-    
-    <h1>Scoville Scale</h1>
 
-  </body>
+    <main class="main-content">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+
+{% comment %} <script src="{% static 'scripts/' %}"></script> {% endcomment %}
+
+</body>
+
 </html>
-{% endblock %}
