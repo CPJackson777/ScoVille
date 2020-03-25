@@ -1,12 +1,19 @@
 {% block content%}
     <h1>Spicy Experiences</h1>
-    <div class="articles">
+    <div class="all_blogposts">
     {% for blog_post in all_blogposts %}
-        <div class="article">
+        <div class="blog_post">
     
-            {{ blog_post.title }}
-            
+            <h2><a href="#">{{ blog_post.title }}</a></h2>
+            <p>{{ blog_post.body }}</p>
+            <p>{{ blog_post.created_on }}</p>
+        
+             
         </div>
     {% endfor %}
     </div>
 {% endblock %}
+
+
+
+ 
