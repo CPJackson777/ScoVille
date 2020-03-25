@@ -4,6 +4,7 @@ from .auth.register import register_user
 from .home import home
 
 from .scoville_scale.sslist import scovillescale_list
+from .blog_posts.blog_post import blogpost_list
 
 # from .books.list import book_list
 # from .books.details import book_details
