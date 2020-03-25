@@ -10,7 +10,7 @@ def blogpost_list(request):
     if request.method == 'GET':
         all_blogposts = BlogPost.objects.all().order_by('created_on')
 
-        template = 'blog_posts/blogpost_list.html'
+        template = 'blog_post/blogpost_list.html'
         context = {
             'all_blogposts': all_blogposts
         }
