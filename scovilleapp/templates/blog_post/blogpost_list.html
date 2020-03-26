@@ -4,12 +4,12 @@
 {% block content%}
     <h1>Spicy Experiences</h1>
     <div class="all_blogposts">
-    {% for blog_post in all_blogposts %}
+    {% for blogpost in all_blogposts %}
         <div class="blog_post">
     
-            <h2><a href="{% url 'scovilleapp:blog_post' blogpost.id %}">{{ blog_post.title }}</a></h2>
-            <p>{{ blog_post.snippet }}</p>
-            <p>{{ blog_post.created_on }}</p>
+            <h2><a href="{% url 'scovilleapp:blogpost' blogpost.id %}">{{ blogpost.title }}</a></h2>
+            <p>{{ blogpost.snippet }}</p>
+            <p>{{ blogpost.created_on }}</p>
         
              
         </div>

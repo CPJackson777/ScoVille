@@ -1,32 +1,32 @@
 [
     {
-        "model": "scovilleapp.BlogPost",
+        "model": "scovilleapp.Blogpost",
         "pk": 1,
         "fields": {
           "title": "Bell",
           "body": "100 - 500",
           "created_on": null,
-          "tolerance": null,
+          "tolerance": "high",
           "image": "pythonlogo.png",
           "video": "https://www.youtube.com",
           "scoville_scale": 1,
-          "profile_id": 1
+          "author": 1
           
         }
       },
     
       {
-        "model": "scovilleapp.BlogPost",
+        "model": "scovilleapp.Blogpost",
         "pk": 2,
         "fields": {
           "title": "Bell",
           "body": "100 - 500",
           "created_on": null,
-          "tolerance": null,
+          "tolerance": "low",
           "image": "pythonlogo.png",
           "video": "https://www.youtube.com",
           "scoville_scale": 2,
-          "profile_id": 1
+          "author": 1
           
         }
       }

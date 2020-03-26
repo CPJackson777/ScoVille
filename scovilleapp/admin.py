@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import BlogPost
+from .models import Blogpost
 
 
 
@@ -10,5 +10,5 @@ from .models import BlogPost
 #     search_fields = ['title', 'content']
 #     prepopulated_fields = {'slug': ('title',)}
   
-# admin.site.register(BlogPost, PostAdmin)
-admin.site.register(BlogPost)
+# admin.site.register(Blogpost, PostAdmin)
+admin.site.register(Blogpost)

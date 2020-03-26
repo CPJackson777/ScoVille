@@ -1,15 +1,15 @@
 import sqlite3
 from django.shortcuts import redirect, render, reverse
 from django.contrib.auth.decorators import login_required
-from scovilleapp.models import BlogPost, ScovilleScale
+from scovilleapp.models import Blogpost, ScovilleScale
 from ..connection import Connection
 # from scovilleapp.models import model_factory
 
 
 def get_blogpost(blogpost_id):
-    return BlogPost.objects.get(pk=blogpost_id)
+    return Blogpost.objects.get(pk=blogpost_id)
 
-@login_required
+# @login_required
 def blogpost_details(request, blogpost_id):
     if request.method == 'GET':
         blogpost = get_blogpost(blogpost_id)
@@ -31,7 +31,7 @@ def blogpost_details(request, blogpost_id):
         ):
 
         # # retrieve it first:
-            blogpost_to_update = BlogPost.objects.get(pk=blogpost_id)
+            blogpost_to_update = Blogpost.objects.get(pk=blogpost_id)
 
             # # Reassign a property's value
             blogpost_to_update.title = form_data['title']

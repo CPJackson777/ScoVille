@@ -1,11 +1,11 @@
 {% block content %}
 <div class="blogpost_detail">
-    <div class="blog_post">
-        <img src="{{ blog_post.image }}" />
-        <h2>{{ blog_post.title }}</h2>
-        <h3>Written by {{ blog_post.author.username }}</h3>
-        <p>{{ blog_post.body }}</p>
-        <p>{{ blog_post.created_on }}</p>
+    <div class="blogpost">
+        <img src="{{ blogpost.image }}" />
+        <h2>{{ blogpost.title }}</h2>
+        <h3>Written by {{ blogpost.author.username }}</h3>
+        <p>{{ blogpost.body }}</p>
+        <p>{{ blogpost.created_on }}</p>
     </div>
 </div>
 {% endblock %}
