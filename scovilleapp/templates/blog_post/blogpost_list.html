@@ -1,4 +1,4 @@
-{% extends 'shared/base.html' %}
+{% comment %} {% extends 'shared/base.html' %} {% endcomment %}
 {% load static %}
 
 {% block content%}
@@ -7,7 +7,7 @@
     {% for blog_post in all_blogposts %}
         <div class="blog_post">
     
-            <h2><a href="#">{{ blog_post.title }}</a></h2>
+            <h2><a href="{% url 'scovilleapp:blog_post' blogpost.id %}">{{ blog_post.title }}</a></h2>
             <p>{{ blog_post.snippet }}</p>
             <p>{{ blog_post.created_on }}</p>
         

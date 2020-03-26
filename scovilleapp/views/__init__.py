@@ -15,6 +15,6 @@ from .blog_posts.blog_post import blogpost_list
 # from .libraries.list import library_list
 
 # from .librarians.list import list_librarians
-from .blog_posts.blog_post_detail import get_post
+from .blog_posts.blog_post_detail import blogpost_details
 
 # from .connection import Connection
