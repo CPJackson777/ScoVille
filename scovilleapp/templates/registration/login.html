@@ -1,6 +1,14 @@
-<h2>Login</h2>
-<form method="post">
+{% extends 'shared/base.html' %}
+{% block content %}
+
+<div class="add-edit-form">
+<h2>Welcome!</h2>
+ <form method="post">
     {% csrf_token %}
     {{ form.as_p }}
-    <button type="submit">Login</button>
-</form>
+    <button class="btn btn-primary" type="submit">Login</button>
+ </form>
+<a class="register-link" href="{% url 'scovilleapp:register' %}">Don't have an account? Register here.</a>
+ </div>
+    
+{% endblock %}

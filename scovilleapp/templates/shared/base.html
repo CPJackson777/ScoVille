@@ -17,7 +17,7 @@
 <body>
 
     <nav id="site-nav">
-        <img class="logo" src="{% static 'img/pythonlogo.png' %}" alt="Scoville logo">
+        {% comment %} <img class="logo" src="{% static 'img/pythonlogo.png' %}" alt="Scoville logo"> {% endcomment %}
         <ul class="navList">
             
             <li class="navList__route"><a href="{% url 'scovilleapp:logout' %}">Log Out</a></li>
