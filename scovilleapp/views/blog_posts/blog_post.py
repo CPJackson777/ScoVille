@@ -21,10 +21,9 @@ def blogpost_list(request):
         new_blogpost = Blogpost.objects.create(
             title = form_data['title'],
             body = form_data['body'],
-            created_on = form_data['created_on'],
             tolerance = form_data['tolerance'],
             image = form_data['image'],
-            author = form_data['author'],
+            author = request.user.id,
             scoville_scale = form_data['scoville_scale']
         )
 
