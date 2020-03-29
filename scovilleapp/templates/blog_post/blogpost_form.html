@@ -15,16 +15,26 @@
             <input id="image" type="text" name="image" value="{{ blogpost.image }}">
         </fieldset>
         <fieldset>
-            <label for="address">Title: </label>
-            <input id="address" type="text" name="address" value="{{ blogpost.title }}">
+            <label for="title">Title: </label>
+            <input id="title" type="text" name="title" value="{{ blogpost.title }}">
         </fieldset>
         <fieldset>
-            <label for="askingPrice">Body: </label>
-            <textarea id="askingPrice" name="askingPrice" value="{{ blogpost.body }}"></textarea>
+            <label for="body">Body: </label>
+            <textarea id="body" name="body" value="{{ blogpost.body }}"></textarea>
         </fieldset>
         <fieldset>
-            <label for="notes">tolerance: </label>
-            <input id="notes" type="text" name="notes" value="{{ blogpost.tolerance }}">
+            <label for="tolerance">tolerance: </label>
+            <input id="tolerance" type="text" name="tolerance" value="{{ blogpost.tolerance }}">
+        </fieldset>
+        <fieldset>
+            <label for="scoville_scale">Scoville Category: </label>
+            {% comment %} <select id="scoville_scale" type="text" name="scoville_scale" value="{{ blogpost.scoville_scale }}"> {% endcomment %}
+
+            <select id="scoville_scale" type="text" name="scoville_scale">
+                {% for scale in scales %}
+                    <option {% if player.id == match.player_id %}selected{% endif %} value="{{ scale.id }}">{{ scale.pepper_name }} </option>
+                {% endfor %}
+            </select>
         </fieldset>
         
 
