@@ -4,7 +4,7 @@
 {% block content%}
     <h1>Spicy Experiences</h1>
     <div class="all_blogposts">
-    {% for blogpost in all_blogposts %}
+    {% comment %} {% for blogpost in all_blogposts %}
         <div class="blog_post">
     
             <h2><a href="{% url 'scovilleapp:blogpost' blogpost.id %}">{{ blogpost.title }}</a></h2>
@@ -13,6 +13,21 @@
         
              
         </div>
+    {% endfor %} {% endcomment %}
+    {% for blogpost in all_blogposts %}
+    <div class="col-md-4">
+        <div class="card mb-2">
+            <img class="card-img-top" src="{% static blogpost.image %}">
+            <div class="card-body">
+                <h5 class="card-title">{{ blogpost.title }}</h5>
+                <p class="card-text">{{ blogpost.snippet }}</p>
+                <a href="{% url 'scovilleapp:blogpost' blogpost.id %}"
+                   class="btn btn-primary">
+                    Read More
+                </a>
+            </div>
+        </div>
+    </div>
     {% endfor %}
     </div>
 {% endblock %}
