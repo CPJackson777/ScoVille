@@ -5,13 +5,17 @@ from ..connection import Connection
 from django.contrib.auth.decorators import login_required
 
 
-def blogpost_list(request):
+def blogpost_list(request, scoville_scale_id=None):
     if request.method == 'GET':
-        all_blogposts = Blogpost.objects.all().order_by('created_on')
+        if scoville_scale_id is not None:
+            all_blogposts = Blogpost.objects.filter(scoville_scale_id = scoville_scale_id)
+        else:   
+            all_blogposts = Blogpost.objects.all().order_by('created_on')
 
         template = 'blog_post/blogpost_list.html'
         context = {
-            'all_blogposts': all_blogposts
+            'all_blogposts': all_blogposts,
+            'scoville_scale_id': scoville_scale_id
         }
         return render(request, template, context)
 

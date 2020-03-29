@@ -5,8 +5,11 @@
 
 
     <h1>Spicy Experiences</h1>
-
+    {% if scoville_scale_id is not None %}
+    <a href="{% url 'scovilleapp:blogpost_form' scoville_scale_id %}">Tell Us About Your Experience</a>
+    {% else %}
     <a href="{% url 'scovilleapp:blogpost_form' %}">Tell Us About Your Experience</a>
+    {% endif %}
 
     <div class="all_blogposts">
     {% for blogpost in all_blogposts %}

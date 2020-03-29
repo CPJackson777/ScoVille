@@ -5,15 +5,16 @@ from scovilleapp.views.blog_posts.blog_post_detail import blogpost_details, get_
 
 #GET form to ADD/CREATE a blog post
 @login_required
-def blogpost_form(request):
+def blogpost_form(request, scoville_scale_id=None):
     '''Getting the form 
 '''
     if request.method == 'GET':
-        blogpost_list = Blogpost.objects.all()
-        scales = ScovilleScale.objects.all()
+        if scoville_scale_id is not None:
+            scales = ScovilleScale.objects.filter(id = scoville_scale_id)
+        else:
+            scales = ScovilleScale.objects.all()
         template = 'blog_post/blogpost_form.html'
         context = {
-            'blogpost_list': blogpost_list, 
             'scales': scales
         }
         for scale in scales: 
