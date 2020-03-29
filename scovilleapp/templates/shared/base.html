@@ -21,8 +21,8 @@
         <img class="logo" src="{% static 'img/ScovilleNav.png' %}" alt="Scoville logo">
         <ul class="navList">
             
-            {% comment %} <li class="navList__route"><a href="{% url 'scovilleapp:scovillescale_list' %}">Scoville Scale Categories</a></li>
-            <li class="navList__route"><a href="{% url 'scovilleapp:blogpost_list' %}">Blog Posts</a></li> {% endcomment %}
+            <li class="navList__route"><a href="{% url 'scovilleapp:scovillescale' %}">Scoville Scale Categories</a></li>
+            <li class="navList__route"><a href="{% url 'scovilleapp:blogposts' %}">Blog Posts</a></li>
             {% if user.is_authenticated %}
             <li class="navList__route">Hi {{ user.username }}! <a href="{% url 'scovilleapp:logout'%}">Logout</a></li>
             {% else %}

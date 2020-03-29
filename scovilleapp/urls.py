@@ -13,5 +13,7 @@ urlpatterns = [
    path('register/', register_user, name='register'),
    path('scovillescale/', scovillescale_list, name='scovillescale'), 
    path('blogposts/', blogpost_list, name='blogposts'),
-   path('blogposts/<int:blogpost_id>/', blogpost_details, name='blogpost'), 
+   path('blogposts/<int:blogpost_id>/', blogpost_details, name='blogpost'),
+   
+    
 ]
