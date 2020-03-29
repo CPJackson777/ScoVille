@@ -14,6 +14,5 @@ urlpatterns = [
    path('scovillescale/', scovillescale_list, name='scovillescale'), 
    path('blogposts/', blogpost_list, name='blogposts'),
    path('blogposts/<int:blogpost_id>/', blogpost_details, name='blogpost'),
-   
-    
+   path('blogpost/form', blogpost_form, name='blogpost_form'),
 ]

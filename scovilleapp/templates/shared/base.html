@@ -26,7 +26,7 @@
             {% if user.is_authenticated %}
             <li class="navList__route">Hi {{ user.username }}! <a href="{% url 'scovilleapp:logout'%}">Logout</a></li>
             {% else %}
-            <li class="navList__route">You are not logged in <a href="{% url 'scovilleapp:login'%}">Login</a></li>
+            <li class="navList__route"> <a href="{% url 'scovilleapp:login'%}">Login</a></li>
             {% endif %}
             
             {% comment %} <li class="navList__route"><a href="{% url 'scovilleapp:logout' %}">Log Out</a></li> {% endcomment %}

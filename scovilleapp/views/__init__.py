@@ -11,4 +11,4 @@ from .scoville_scale.sslist import scovillescale_list
 #Views for blog posts
 from .blog_posts.blog_post import blogpost_list
 from .blog_posts.blog_post_detail import blogpost_details
-# from .blog_posts.blog_post_form import blogpost_form, blogpost_edit_form
+from .blog_posts.blog_post_form import blogpost_form, blogpost_edit_form

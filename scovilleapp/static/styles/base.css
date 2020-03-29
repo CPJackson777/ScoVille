@@ -1,12 +1,12 @@
-body {
+/* body {
     background-color: aquamarine;
-    /* background-image: url(/static/img/fire-dragon.jpg); */
-}
+    background-image: url(/static/img/fire-dragon.jpg);
+} */
 
-/* html { 
+html { 
     background: url(/static/img/woodpanels.) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-  } */
+  }

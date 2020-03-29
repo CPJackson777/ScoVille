@@ -1,12 +1,44 @@
-{% comment %} {% extends 'shared/base.html' %}
+{% extends 'shared/base.html' %}
 {% load static %}
 
+{% block content %}
 
-<form action="{% url 'scovilleapp:blogposts' %}" method="post">
 
-    {% csrf_token %}
+{% if blogpost.id is not None %}
+        <form action="{% url 'scovilleapp:blogpost' blogpost.id %}" method="post">
+    {% else %}
+        <form action="{% url 'scovilleapp:blogposts' %}" method="post">
+    {% endif %}
+        {% csrf_token %}
+        <fieldset>
+            <label for="image">Image Url: {{ blogpost.image }} </label>
+            <input id="image" type="text" name="image" value="{{ blogpost.image }}">
+        </fieldset>
+        <fieldset>
+            <label for="address">Title: </label>
+            <input id="address" type="text" name="address" value="{{ blogpost.title }}">
+        </fieldset>
+        <fieldset>
+            <label for="askingPrice">Body: </label>
+            <textarea id="askingPrice" name="askingPrice" value="{{ blogpost.body }}"></textarea>
+        </fieldset>
+        <fieldset>
+            <label for="notes">tolerance: </label>
+            <input id="notes" type="text" name="notes" value="{{ blogpost.tolerance }}">
+        </fieldset>
+        
 
-    <div class="form-group">
+        {% if blogpost.id is not None %}
+            <input type="hidden" name="actual_method" value="PUT">
+            <input type="submit" value="Update" />
+        {% else %}
+            <input type="submit" value="Create" />
+        {% endif %}
+
+    </form>
+    
+    
+    {% comment %} <div class="form-group">
         <label for="exampleInputEmail1">Email address</label>
         <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
         <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
@@ -25,6 +57,7 @@
     </div>
 
 
-    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="submit" class="btn btn-primary">Submit</button> {% endcomment %}
+    
 
-</form> {% endcomment %}
+{% endblock %}
