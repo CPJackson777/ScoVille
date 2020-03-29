@@ -8,11 +8,11 @@ class ScovilleScale(models.Model):
     image = models.FilePathField(path="/img")
 
     class Meta:
-        verbose_name = ("ScovilleScale")
-        verbose_name_plural = ("ScovilleScales")
+        verbose_name = ("scovilleScale")
+        verbose_name_plural = ("scovilleScales")
 
     def __str__(self):
         return self.pepper_name
 
     def get_absolute_url(self):
-        return reverse("ScovilleScale_detail", kwargs={"pk": self.pk})
+        return reverse("scovilleScale_detail", kwargs={"pk": self.pk})

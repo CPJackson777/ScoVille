@@ -6,6 +6,7 @@
 <head>
     <meta charset="utf-8">
     <title>Scoville</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'styles/bootstrap.css' %}" />
     <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
@@ -17,10 +18,18 @@
 <body>
 
     <nav id="site-nav">
-        {% comment %} <img class="logo" src="{% static 'img/pythonlogo.png' %}" alt="Scoville logo"> {% endcomment %}
+        <img class="logo" src="{% static 'img/ScovilleNav.png' %}" alt="Scoville logo">
         <ul class="navList">
             
-            <li class="navList__route"><a href="{% url 'scovilleapp:logout' %}">Log Out</a></li>
+            {% comment %} <li class="navList__route"><a href="{% url 'scovilleapp:scovillescale_list' %}">Scoville Scale Categories</a></li>
+            <li class="navList__route"><a href="{% url 'scovilleapp:blogpost_list' %}">Blog Posts</a></li> {% endcomment %}
+            {% if user.is_authenticated %}
+            <li class="navList__route">Hi {{ user.username }}! <a href="{% url 'scovilleapp:logout'%}">Logout</a></li>
+            {% else %}
+            <li class="navList__route">You are not logged in <a href="{% url 'scovilleapp:login'%}">Login</a></li>
+            {% endif %}
+            
+            {% comment %} <li class="navList__route"><a href="{% url 'scovilleapp:logout' %}">Log Out</a></li> {% endcomment %}
 
         </ul>
     </nav>

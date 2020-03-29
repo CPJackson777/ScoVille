@@ -45,4 +45,14 @@ def blogpost_details(request, blogpost_id):
             # # Save the change to the db
             blogpost_to_update.save()
 
+            # Check if this POST is for deleting a book
+        if (
+            "actual_method" in form_data
+            and form_data["actual_method"] == "DELETE"
+        ):
+            blogpost = Blogpost.objects.get(pk=blogpost_id)
+            blogpost.delete()
+
+
             return redirect(reverse('scovilleapp:blogposts'))
+            

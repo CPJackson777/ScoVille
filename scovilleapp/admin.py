@@ -1,14 +1,9 @@
 from django.contrib import admin
+
+# Import your models here.
 from .models import Blogpost
+# from .models import ScovilleScale
 
 
-
-
-# class PostAdmin(admin.ModelAdmin):
-#     list_display = ('title', 'slug', 'status','created_on')
-#     list_filter = ("status",)
-#     search_fields = ['title', 'content']
-#     prepopulated_fields = {'slug': ('title',)}
-  
-# admin.site.register(Blogpost, PostAdmin)
+# Register your models to admin site, then you can add, edit, delete and search your models in Django admin site.
 admin.site.register(Blogpost)
