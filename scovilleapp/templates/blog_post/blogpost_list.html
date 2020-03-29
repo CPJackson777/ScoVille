@@ -2,18 +2,13 @@
 {% load static %}
 
 {% block content%}
+
+
     <h1>Spicy Experiences</h1>
+
+    <a href="{% url 'scovilleapp:blogpost_form' %}">Tell Us About Your Experience</a>
+
     <div class="all_blogposts">
-    {% comment %} {% for blogpost in all_blogposts %}
-        <div class="blog_post">
-    
-            <h2><a href="{% url 'scovilleapp:blogpost' blogpost.id %}">{{ blogpost.title }}</a></h2>
-            <p>{{ blogpost.snippet }}</p>
-            <p>{{ blogpost.created_on }}</p>
-        
-             
-        </div>
-    {% endfor %} {% endcomment %}
     {% for blogpost in all_blogposts %}
     <div class="col-md-4">
         <div class="card mb-2">
