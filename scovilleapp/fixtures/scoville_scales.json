@@ -3,9 +3,9 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 1,
         "fields": {
+          "image": "static/img/chili.png",
           "pepper_name": "Bell Pepper",
-          "heat_range": "0",
-          "image": "pythonlogo.png"
+          "heat_range": "0"
         }
       },
     
@@ -13,9 +13,9 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 2,
         "fields": {
+            "image": "img/chili.png",
             "pepper_name": "Anaheim Pepper",
-            "heat_range": "500 - 2,500",
-            "image": "pythonlogo.png"
+            "heat_range": "500 - 2,500"
         }
       },
     
@@ -23,9 +23,9 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 3,
         "fields": {
+            "image": "img/chili.png",
             "pepper_name": "Jalapeno Pepper",
-            "heat_range": "2,500 - 8,000",
-            "image": "pythonlogo.png"
+            "heat_range": "2,500 - 8,000"
         }
       },
 
@@ -33,9 +33,9 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 4,
         "fields": {
+            "image": "img/chili.png",
             "pepper_name": "Cayenne Pepper",
-            "heat_range": "30,000 - 50,000",
-            "image": "pythonlogo.png"
+            "heat_range": "30,000 - 50,000"
         }
       },
     
@@ -43,9 +43,9 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 5,
         "fields": {
+            "image": "img/chili.png",
             "pepper_name": "Thai Pepper",
-            "heat_range": "50,000 - 100,000",
-            "image": "pythonlogo.png"
+            "heat_range": "50,000 - 100,000"
         }
       },
 
@@ -53,9 +53,9 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 6,
         "fields": {
+            "image": "img/chili.png",
             "pepper_name": "Habanero Pepper",
-            "heat_range": "100,000 - 350,000",
-            "image": "pythonlogo.png"
+            "heat_range": "100,000 - 350,000"
         }
       },
 
@@ -63,9 +63,9 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 7,
         "fields": {
+            "image": "img/chili.png",
             "pepper_name": "Ghost Pepper",
-            "heat_range": "855,000 - 1,041,427",
-            "image": "pythonlogo.png"
+            "heat_range": "855,000 - 1,041,427"
         }
       },
 
@@ -73,9 +73,9 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 8,
         "fields": {
+            "image": "img/chili.png",
             "pepper_name": "Carolina Reaper Pepper",
-            "heat_range": "1,400,000 - 2,200,000",
-            "image": "pythonlogo.png"
+            "heat_range": "1,400,000 - 2,200,000"
         }
       }
     ]

@@ -8,11 +8,13 @@
     <ul>
     {% for scoville_scale in scale_list %}
         <li>
-            {% comment %} <a href="{% url 'scovilleapp:book' book.id %}"> {{ book.title }} </a>
-    by {{book.author}} published in {{book.year}} {% endcomment %}
     {{scoville_scale.pepper_name}}
     {{scoville_scale.heat_range}}
     <img src="{{scoville_scale.image}}">
+    {% comment %} <a href="{% url 'scovilleapp:blogpost' scoville_scale.id %}"
+                   class="btn btn-primary">
+                    Go to Blogs
+                </a> {% endcomment %}
         </li>
     {% endfor %}
     </ul>

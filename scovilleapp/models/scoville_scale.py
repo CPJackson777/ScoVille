@@ -3,9 +3,9 @@ from django.urls import reverse
 
 class ScovilleScale(models.Model):
 
+    image = models.FilePathField(path="/img")
     pepper_name = models.CharField(max_length=100)
     heat_range = models.CharField(max_length=100)
-    image = models.FilePathField(path="/img")
 
     class Meta:
         verbose_name = ("scovilleScale")
