@@ -3,7 +3,6 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from scovilleapp.models import Blogpost, ScovilleScale
 from ..connection import Connection
-# from scovilleapp.models import model_factory
 
 
 def get_blogpost(blogpost_id):

@@ -10,5 +10,10 @@
         <p>{{ blogpost.body }}</p>
         <p>{{ blogpost.created_on }}</p>
     </div>
+    <form action="{% url 'scovilleapp:blogpost' blogpost.id %}" method="POST">
+    {% csrf_token %}
+    <input type="hidden" name="actual_method" value="DELETE">
+    <button>Delete</button>
+</form>
 </div>
 {% endblock %}
