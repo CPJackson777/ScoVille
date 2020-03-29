@@ -1,0 +1,14 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="blogpost_detail">
+    <div class="blogpost">
+        <img src="{{ blogpost.image }}" />
+        <h2>{{ blogpost.title }}</h2>
+        <h3>Written by {{ blogpost.author.username }}</h3>
+        <p>{{ blogpost.body }}</p>
+        <p>{{ blogpost.created_on }}</p>
+    </div>
+</div>
+{% endblock %}

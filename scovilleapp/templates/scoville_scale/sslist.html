@@ -1,0 +1,21 @@
+{% extends 'shared/base.html' %}
+{% load static %}
+
+
+{% block content %}
+    <h1>Scoville Scale</h1>
+
+    <ul>
+    {% for scoville_scale in scale_list %}
+        <li>
+    {{scoville_scale.pepper_name}}
+    {{scoville_scale.heat_range}}
+    <img src="{{scoville_scale.image}}">
+    {% comment %} <a href="{% url 'scovilleapp:blogpost' scoville_scale.id %}"
+                   class="btn btn-primary">
+                    Go to Blogs
+                </a> {% endcomment %}
+        </li>
+    {% endfor %}
+    </ul>
+    {% endblock %}

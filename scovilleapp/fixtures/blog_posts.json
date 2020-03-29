@@ -1,30 +1,32 @@
 [
     {
-        "model": "scovilleapp.BlogPost",
+        "model": "scovilleapp.Blogpost",
         "pk": 1,
         "fields": {
-          "title": "Bell",
-          "body": "100 - 500",
+          "title": "My First Bell Pepper Experience",
+          "body": "This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test. This is a test.",
           "created_on": null,
+          "tolerance": "high",
           "image": "pythonlogo.png",
           "video": "https://www.youtube.com",
           "scoville_scale": 1,
-          "profile_id": 1
+          "author": 1
           
         }
       },
     
       {
-        "model": "scovilleapp.BlogPost",
+        "model": "scovilleapp.Blogpost",
         "pk": 2,
         "fields": {
-          "title": "Bell",
-          "body": "100 - 500",
+          "title": "It Actually Wasn't THAT Bad...",
+          "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum..",
           "created_on": null,
+          "tolerance": "low",
           "image": "pythonlogo.png",
           "video": "https://www.youtube.com",
           "scoville_scale": 2,
-          "profile_id": 1
+          "author": 1
           
         }
       }
