@@ -16,6 +16,7 @@
             <div class="card-body">
                 <h5 class="card-title">{{ blogpost.title }}</h5>
                 <p class="card-text">{{ blogpost.snippet }}</p>
+                <p class="card-text">{{ blogpost.scoville_scale.pepper_name }}</p>
                 <a href="{% url 'scovilleapp:blogpost' blogpost.id %}"
                    class="btn btn-primary">
                     Read More
