@@ -8,9 +8,9 @@
     <ul>
     {% for scoville_scale in scale_list %}
         <li>
+    <img src="{{scoville_scale.image}}" class="rounded-right">
     {{scoville_scale.pepper_name}}
     {{scoville_scale.heat_range}}
-    <img src="{{scoville_scale.image}}">
     <a href="{% url 'scovilleapp:blogposts' scoville_scale.id %}"
                    class="btn btn-primary">
                     Go to Blogs
