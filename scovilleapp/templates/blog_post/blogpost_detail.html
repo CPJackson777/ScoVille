@@ -11,6 +11,7 @@
         <p>{{ blogpost.created_on }}</p>
     </div>
 
+    {% if blogpost.author_id == request.user.id %}
     <form action="{% url 'scovilleapp:blogpost' blogpost.id %}" method="POST">
     {% csrf_token %}
     <input type="hidden" name="actual_method" value="DELETE">
@@ -21,6 +22,10 @@
             {% csrf_token %}
             <button>Edit</button>
     </form>
+    {% else%}
+    <div> You are not authorized to edit or delete this post. </div>
+    {% endif %}
+
     
 </div>
 {% endblock %}
