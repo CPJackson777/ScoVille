@@ -1,6 +1,8 @@
 {% extends 'shared/base.html' %}
 {% load static %}
-
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/details.css' %}" type="text/css" media="screen" />
+{% endblock %}
 {% block content %}
 <div class="blogpost_detail">
     <div class="blogpost">

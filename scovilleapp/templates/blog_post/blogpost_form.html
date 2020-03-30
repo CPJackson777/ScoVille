@@ -1,76 +1,57 @@
 {% extends 'shared/base.html' %}
 {% load static %}
-
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/form.css' %}" type="text/css" media="screen" />
+{% endblock %}
 {% block content %}
 
 
 {% if blogpost.id is not None %}
-        <form action="{% url 'scovilleapp:blogpost' blogpost.id %}" method="post">
+<div class="form-group">
+        <form action="{% url 'scovilleapp:blogpost' blogpost.id %}" method="post" class="cform">
     {% else %}
         <form action="{% url 'scovilleapp:blogposts' %}" method="post">
     {% endif %}
         {% csrf_token %}
-        <fieldset>
-            <label for="blog_image">Image Url: {{ blogpost.blog_image }} </label>
-            <input id="blog_image" type="text" name="blog_image" value="{{ blogpost.blog_image }}">
-        </fieldset>
-        <fieldset>
+        <fieldset class="col-md-5">
+            <label for="blog_image">Image Url: </label>
+            <input class="form-control" id="blog_image" type="text" name="blog_image" value="{{ blogpost.blog_image }}">
+        </fieldset class="col-md-5">
+        <fieldset class="col-md-5">
             <label for="title">Title: </label>
-            <input id="title" type="text" name="title" value="{{ blogpost.title }}">
+            <input class="form-control" id="title" type="text" name="title" value="{{ blogpost.title }}">
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-5">
             <label for="body">Body: </label>
-            <textarea id="body" name="body">{{ blogpost.body }}</textarea>
+            <textarea class="form-control" id="body" rows="5" name="body">{{ blogpost.body }}</textarea>
         </fieldset>
-        <fieldset>
-            <label for="tolerance">tolerance: </label>
-            <input id="tolerance" type="text" name="tolerance" value="{{ blogpost.tolerance }}">
+        <fieldset class="col-md-5">
+            <label for="tolerance">Tolerance: </label>
+            <input class="form-control" id="tolerance" type="text" name="tolerance" value="{{ blogpost.tolerance }}">
         </fieldset>
-        <fieldset>
+        <fieldset class="col-md-5">
             <label for="scoville_scale">Scoville Category: </label>
 
-            <select id="scoville_scale" type="text" name="scoville_scale">
+            <select class="form-control" id="scoville_scale" type="text" name="scoville_scale">
                 {% for scale in scales %}
                     <option value="{{ scale.id }}">{{ scale.pepper_name }} </option>
                 {% endfor %}
             </select>
-        </fieldset>
+        </fieldset class="col-md-5">
         {% comment %} <fieldset>
             <label for="video">Video Url: {{ blogpost.video }} </label>
             <input id="video" type="text" name="video" value="{{ blogpost.video }}">
         </fieldset> {% endcomment %}
         
-
+        <br></br>
         {% if blogpost.id is not None %}
             <input type="hidden" name="actual_method" value="PUT">
-            <input type="submit" value="Update" />
+            <input class="btn btn-primary" type="submit" value="Update" />
         {% else %}
-            <input type="submit" value="Create" />
+            <input class="btn btn-primary" type="submit" value="Create" />
         {% endif %}
 
     </form>
-    
-    
-    {% comment %} <div class="form-group">
-        <label for="exampleInputEmail1">Email address</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
-    </div>
-
-
-    <div class="form-group">
-        <label for="exampleInputPassword1">Password</label>
-        <input type="password" class="form-control" id="exampleInputPassword1">
-    </div>
-
-
-    <div class="form-group form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1">
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-    </div>
-
-
-    <button type="submit" class="btn btn-primary">Submit</button> {% endcomment %}
-    
+</div>
 
 {% endblock %}
