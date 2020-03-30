@@ -1,21 +1,45 @@
 {% extends 'shared/base.html' %}
 {% load static %}
-
-
 {% block content %}
+
     <h1>Scoville Scale</h1>
 
-    <ul>
+
+    <div class="card" id="scalecard" style="width: 18rem;">
+    <div class="card-body">  
     {% for scoville_scale in scale_list %}
-        <li>
-    <img src="{{scoville_scale.image}}" class="rounded-right">
-    {{scoville_scale.pepper_name}}
-    {{scoville_scale.heat_range}}
+    <img src="{{scoville_scale.image}}" class="card-img-top">
+    <h5 class="card-title">{{scoville_scale.pepper_name}}</h5>
+    <p class="card-text">This pepper is {{scoville_scale.heat_range}} Scoville Heat Units!</p>
     <a href="{% url 'scovilleapp:blogposts' scoville_scale.id %}"
                    class="btn btn-primary">
                     Go to Blogs
                 </a>
-        </li>
+     
     {% endfor %}
-    </ul>
+    </div>
+    </div>
     {% endblock %}
+
+    
+    {% comment %} <div class="card mb-3" style="max-width: 700px;">
+    <div class="row no-gutters">
+    <div class="col-md-4">
+    <img src="{{scoville_scale.image}}" class="card-img-top">
+    </div>
+    <div class="col-md-8">
+    <div class="card-body">  
+    {% for scoville_scale in scale_list %}
+    <h5 class="card-title">{{scoville_scale.pepper_name}}</h5>
+    <p class="card-text">This pepper is {{scoville_scale.heat_range}} Scoville Heat Units!</p>
+    <a href="{% url 'scovilleapp:blogposts' scoville_scale.id %}"
+                   class="btn btn-primary">
+                    Go to Blogs
+                </a>
+     
+    {% endfor %}
+    </div>
+    </div>
+    {% endblock %} {% endcomment %}
+
+
