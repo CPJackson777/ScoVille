@@ -3,7 +3,6 @@ from django.urls import reverse
 from django.contrib.auth.decorators import login_required
 from scovilleapp.models import Blogpost, ScovilleScale
 from ..connection import Connection
-# from scovilleapp.models import model_factory
 
 
 def get_blogpost(blogpost_id):
@@ -36,14 +35,15 @@ def blogpost_details(request, blogpost_id):
             # # Reassign a property's value
             blogpost_to_update.title = form_data['title']
             blogpost_to_update.body = form_data['body']
-            blogpost_to_update.created_on = form_data['created_on']
+            # blogpost_to_update.created_on = form_data['created_on']
             blogpost_to_update.tolerance = form_data['tolerance']
             blogpost_to_update.image = form_data['image']
-            blogpost_to_update.author = form_data['author']
-            blogpost_to_update.scoville_scale = form_data['scoville_scale']
+            # blogpost_to_update.author_id = form_data['author']
+            blogpost_to_update.scoville_scale_id = form_data['scoville_scale']
 
             # # Save the change to the db
             blogpost_to_update.save()
+            return redirect(reverse('scovilleapp:blogposts'))
 
             # Check if this POST is for deleting a book
         if (

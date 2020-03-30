@@ -20,7 +20,7 @@
         </fieldset>
         <fieldset>
             <label for="body">Body: </label>
-            <textarea id="body" name="body" value="{{ blogpost.body }}"></textarea>
+            <textarea id="body" name="body">{{ blogpost.body }}</textarea>
         </fieldset>
         <fieldset>
             <label for="tolerance">tolerance: </label>
@@ -28,11 +28,10 @@
         </fieldset>
         <fieldset>
             <label for="scoville_scale">Scoville Category: </label>
-            {% comment %} <select id="scoville_scale" type="text" name="scoville_scale" value="{{ blogpost.scoville_scale }}"> {% endcomment %}
 
             <select id="scoville_scale" type="text" name="scoville_scale">
                 {% for scale in scales %}
-                    <option {% if player.id == match.player_id %}selected{% endif %} value="{{ scale.id }}">{{ scale.pepper_name }} </option>
+                    <option value="{{ scale.id }}">{{ scale.pepper_name }} </option>
                 {% endfor %}
             </select>
         </fieldset>

@@ -17,4 +17,5 @@ urlpatterns = [
    path('blogposts/<int:blogpost_id>/', blogpost_details, name='blogpost'),
    path('blogpost/form', blogpost_form, name='blogpost_form'),
    path('blogpost/type/<int:scoville_scale_id>/form', blogpost_form, name='blogpost_form'),
+   path('blogposts/<int:blogpost_id>/form/', blogpost_edit_form, name='blogpost_edit_form'),
 ]
