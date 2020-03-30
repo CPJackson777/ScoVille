@@ -1,26 +1,47 @@
-##Instructions for using ScoVille
-In your terminal, clone down the repo: git@github.com:CPJackson777/ScoVille.git
+# ScoVille
 
-Cd into the repo: cd scoville
+## Steps to get This project started:
 
-Create a virtual environment:
-Windows:
-python -m venv scovillenv
-source ./scovilleenv/Scripts/activate
-Mac:
-python -m venv scovilleenv
-source ./scovilleenv/bin/activate
+* Clone down the repo and `cd` into it
 
-Install dependencies: pip install -r requirements.txt
+* Create your OSX virtual environment in Terminal:
 
-Create a database:
-python manage.py makemigrations
-python manage.py migrate
+  * `python -m venv scovillenv`
+  * `source ./scovillenv/bin/activate`
 
-Load the scoville scale and blog post data in the database from fixtures:
-python manage.py loaddata scoville_scales
-python manage.py loaddata blog_posts
+* Or create your Windows virtual environment in Command Line:
 
-Run the server: python manage.py runserver
+  * `python -m venv scovillenv`
+  * `source ./scovillenv/Scripts/activate`
 
-Navigate to http://localhost:8000/
+* Install the app's dependencies:
+
+  * `pip install -r requirements.txt`
+
+* Build your database from the existing models:
+
+  * `python manage.py makemigrations`
+  * `python manage.py migrate`
+
+* Create a superuser for your local version of the app:
+
+  * `python manage.py createsuperuser`
+* If you get this message `Superuser creation skipped due to not running in a TTY. You can run `manage.py createsuperuser` in your project to create one manually.`
+
+  *`winpty python manage.py createsuperuser`
+
+* Populate your database with initial data from fixtures files: (_NOTE: every time you run this it will remove existing data and repopulate it) 
+
+  * `python manage.py loaddata scoville_scales`
+  * `python manage.py loaddata blog_posts`
+
+* Enjoy ScoVille!
+
+  * `python manage.py runserver`
+  
+  * Navigate to http://localhost:8000/
+
+
+## ERD
+
+https://www.lucidchart.com/documents/edit/6cdecc2d-e9b5-4fbf-9799-6ba1368aebdd/0_0
