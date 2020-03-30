@@ -1,0 +1,33 @@
+.scale-card {
+    
+    background-color: white;
+    margin: 10px; 
+    box-shadow: 0 4px 4px 0 rgba(230, 201, 201, 0.2);
+    border-radius: 10px; /* rounded corners */
+    display: flex;
+    align-content: center;
+    width: 35%;
+    justify-content: center;
+}
+
+.scale-card img {
+    width: 200px;
+    height: auto;
+}
+
+.scale-card-text {
+    padding-left: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.overall-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+h1 {
+    text-align: center;
+}

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="{% static 'styles/base.css' %}" />
 
     {% block css %}
+    <link rel="stylesheet" href="{% static 'styles/navbar.css' %}" type="text/css" media="screen" />
     {% endblock %}
 </head>
 
@@ -20,7 +21,7 @@
     <nav id="site-nav">
         <ul class="navList">
         <img class="logo" src="{% static 'img/ScovilleNav.png' %}" alt="Scoville logo">
-            
+                
             {% if user.is_authenticated %}
     <ul class="nav nav-tabs">
             <li class="nav-item"><a class="nav-link" href="{% url 'scovilleapp:scovillescale' %}">Scoville Scale Categories</a></li>
