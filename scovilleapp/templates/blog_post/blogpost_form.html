@@ -11,8 +11,8 @@
     {% endif %}
         {% csrf_token %}
         <fieldset>
-            <label for="image">Image Url: {{ blogpost.image }} </label>
-            <input id="image" type="text" name="image" value="{{ blogpost.image }}">
+            <label for="blog_image">Image Url: {{ blogpost.blog_image }} </label>
+            <input id="blog_image" type="text" name="blog_image" value="{{ blogpost.blog_image }}">
         </fieldset>
         <fieldset>
             <label for="title">Title: </label>
@@ -35,6 +35,10 @@
                 {% endfor %}
             </select>
         </fieldset>
+        {% comment %} <fieldset>
+            <label for="video">Video Url: {{ blogpost.video }} </label>
+            <input id="video" type="text" name="video" value="{{ blogpost.video }}">
+        </fieldset> {% endcomment %}
         
 
         {% if blogpost.id is not None %}

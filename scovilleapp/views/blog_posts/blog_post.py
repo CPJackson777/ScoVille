@@ -26,7 +26,7 @@ def blogpost_list(request, scoville_scale_id=None):
             title = form_data['title'],
             body = form_data['body'],
             tolerance = form_data['tolerance'],
-            image = form_data['image'],
+            blog_image = form_data['blog_image'],
             author_id = request.user.id,
             scoville_scale_id = form_data['scoville_scale']
         )

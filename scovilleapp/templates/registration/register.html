@@ -1,37 +1,39 @@
-{% comment %} {% extends 'shared/base.html' %} {% endcomment %}
+{% extends 'shared/base.html' %}
+{% load static %}
 
 {% block content %}
     <h1>Register</h1>
 
     <form action="{% url 'scovilleapp:register' %}" method="post">
+    <div class="form-group">
         <fieldset>
             <label for="username">Username: </label>
-            <input id="username" type="text" name="username" required>
+            <input class="form-control" id="username" type="text" name="username" required>
         </fieldset>
 
         <fieldset>
             <label for="first_name">First name: </label>
-            <input id="first_name" type="text" name="first_name" required>
+            <input class="form-control" id="first_name" type="text" name="first_name" required>
         </fieldset>
 
         <fieldset>
             <label for="last_name">Last name: </label>
-            <input id="last_name" type="text" name="last_name" required>
+            <input class="form-control" id="last_name" type="text" name="last_name" required>
         </fieldset>
 
 
         <fieldset>
             <label for="email">Email: </label>
-            <input id="email" type="text" name="email" required>
+            <input class="form-control" id="email" type="text" name="email" required>
         </fieldset>
 
         <fieldset>
             <label for="password">Password: </label>
-            <input id="password" type="password" name="password" required>
+            <input class="form-control" id="password" type="password" name="password" required>
         </fieldset>
 
-        <input type="submit" value="Register" />
-
+        <input type="submit" value="Register" class="btn btn-primary"/>
+    </div>
     </form>
 
 {% endblock %}

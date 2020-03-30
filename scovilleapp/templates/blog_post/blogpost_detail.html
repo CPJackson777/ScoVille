@@ -4,10 +4,11 @@
 {% block content %}
 <div class="blogpost_detail">
     <div class="blogpost">
-        <img src="{{ blogpost.image }}" />
+        <img src="{{ blogpost.blog_image }}" />
         <h2>{{ blogpost.title }}</h2>
         <h3>Written by {{ blogpost.author.username }}</h3>
         <p>{{ blogpost.body }}</p>
+        {% comment %} <iframe width="560" height="315" src="{{blogpost.video}} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> {% endcomment %}
         <p>{{ blogpost.created_on }}</p>
     </div>
 
