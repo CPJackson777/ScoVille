@@ -48,8 +48,9 @@ def blogpost_details(request, blogpost_id):
             "actual_method" in form_data
             and form_data["actual_method"] == "DELETE"
         ):
+            # retrieve it first
             blogpost = Blogpost.objects.get(pk=blogpost_id)
-            blogpost.delete()
+            blogpost.delete() #perform delete
 
 
             return redirect(reverse('scovilleapp:blogposts'))
