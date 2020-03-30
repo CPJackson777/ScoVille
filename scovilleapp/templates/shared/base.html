@@ -21,15 +21,28 @@
         <img class="logo" src="{% static 'img/ScovilleNav.png' %}" alt="Scoville logo">
         <ul class="navList">
             
+            {% if user.is_authenticated %}
             <li class="navList__route"><a href="{% url 'scovilleapp:scovillescale' %}">Scoville Scale Categories</a></li>
             <li class="navList__route"><a href="{% url 'scovilleapp:blogposts' %}">Blog Posts</a></li>
-            {% if user.is_authenticated %}
             <li class="navList__route">Hi {{ user.username }}! <a href="{% url 'scovilleapp:logout'%}">Logout</a></li>
             {% else %}
             <li class="navList__route"> <a href="{% url 'scovilleapp:login'%}">Login</a></li>
             {% endif %}
             
-            {% comment %} <li class="navList__route"><a href="{% url 'scovilleapp:logout' %}">Log Out</a></li> {% endcomment %}
+            <ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Active</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#">Link</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+  </li>
+</ul>
 
         </ul>
     </nav>

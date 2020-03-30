@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 class Blogpost(models.Model):
 
     title = models.CharField(max_length=255)
-    body = models.TextField()
+    body = models.CharField(max_length=1000, null=True)
     created_on = models.DateTimeField(auto_now_add=True, null=True)
     tolerance = models.CharField(max_length=100)
     image = models.FilePathField(path="./scovilleapp/static/img", null=True)

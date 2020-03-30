@@ -20,15 +20,18 @@ def blogpost_form(request, scoville_scale_id=None):
         for scale in scales: 
             print('scale', scale)
         return render(request, template, context)
+
 #GET form to EDIT/UPDATE a blog post
 @login_required
 def blogpost_edit_form(request, blogpost_id):
     if request.method == 'GET':
-        blogpost = get_blogpost(blogpost_id)
-        blogpost_list = Blogpost.objects.all()
+        blogpost = Blogpost.objects.get(id=blogpost_id) 
+        scales = ScovilleScale.objects.all()
+        
         template = 'blog_post/blogpost_form.html'
         context = {
-            'blogpost': blogpost
+            'blogpost': blogpost,
+            'scales': scales
         }
-
+        print('blogpost', blogpost)
         return render(request, template, context)
