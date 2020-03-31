@@ -10,7 +10,7 @@ class Blogpost(models.Model):
     body = models.CharField(max_length=1000, null=True)
     created_on = models.DateTimeField(auto_now_add=True, null=True)
     tolerance = models.CharField(max_length=100)
-    image = models.FilePathField(path="./scovilleapp/static/img", null=True)
+    blog_image = models.CharField(max_length=255, null=True)
     video = models.CharField(max_length=255, null=True)
     scoville_scale = models.ForeignKey(ScovilleScale, on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete= models.CASCADE,related_name='blogposts', null=True)

@@ -35,10 +35,8 @@ def blogpost_details(request, blogpost_id):
             # # Reassign a property's value
             blogpost_to_update.title = form_data['title']
             blogpost_to_update.body = form_data['body']
-            # blogpost_to_update.created_on = form_data['created_on']
             blogpost_to_update.tolerance = form_data['tolerance']
-            blogpost_to_update.image = form_data['image']
-            # blogpost_to_update.author_id = form_data['author']
+            blogpost_to_update.blog_image = form_data['blog_image']
             blogpost_to_update.scoville_scale_id = form_data['scoville_scale']
 
             # # Save the change to the db
@@ -50,8 +48,9 @@ def blogpost_details(request, blogpost_id):
             "actual_method" in form_data
             and form_data["actual_method"] == "DELETE"
         ):
+            # retrieve it first
             blogpost = Blogpost.objects.get(pk=blogpost_id)
-            blogpost.delete()
+            blogpost.delete() #perform delete
 
 
             return redirect(reverse('scovilleapp:blogposts'))

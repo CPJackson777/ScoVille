@@ -14,7 +14,7 @@ def blogpost_list(request, scoville_scale_id=None):
 
         template = 'blog_post/blogpost_list.html'
         context = {
-            'all_blogposts': all_blogposts,
+            'all_blogposts': all_blogposts, #the value is the list of blogs being retrieved by the view on line 11
             'scoville_scale_id': scoville_scale_id
         }
         return render(request, template, context)
@@ -22,17 +22,15 @@ def blogpost_list(request, scoville_scale_id=None):
     elif request.method == 'POST':
         form_data = request.POST
 
+        #make blog post instance and save to database at the same time
         new_blogpost = Blogpost.objects.create(
             title = form_data['title'],
             body = form_data['body'],
             tolerance = form_data['tolerance'],
-            image = form_data['image'],
+            blog_image = form_data['blog_image'],
             author_id = request.user.id,
             scoville_scale_id = form_data['scoville_scale']
         )
 
-        # and then save to the db
-       
-        new_blogpost.save()
 
         return redirect(reverse('scovilleapp:blogposts'))

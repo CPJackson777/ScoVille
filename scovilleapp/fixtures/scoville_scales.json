@@ -3,7 +3,7 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 1,
         "fields": {
-          "image": "static/img/chili.png",
+          "image": "https://images.freshop.com/5989599/dda9a18d04e8f042eae0d49d52b8ed2d_medium.png",
           "pepper_name": "Bell Pepper",
           "heat_range": "0"
         }
@@ -13,7 +13,7 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 2,
         "fields": {
-            "image": "img/chili.png",
+            "image": "http://www.tomatogrowers.com/images/9457.jpg",
             "pepper_name": "Anaheim Pepper",
             "heat_range": "500 - 2,500"
         }
@@ -23,7 +23,7 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 3,
         "fields": {
-            "image": "img/chili.png",
+            "image": "https://s3.amazonaws.com/pickacarrot2/high_mowing_seeds/c64c79368c9d71bb48b0cfbece20b242a32ef9c5_1c8852445bc04ebdd57a9c08009814dcb0330e0c_0a99b15ae66b8fe597ffba955c8b08e54686d7d2.jpg",
             "pepper_name": "Jalapeno Pepper",
             "heat_range": "2,500 - 8,000"
         }
@@ -33,7 +33,7 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 4,
         "fields": {
-            "image": "img/chili.png",
+            "image": "https://s3.amazonaws.com/pickacarrot2/high_mowing_seeds/c64c79368c9d71bb48b0cfbece20b242a32ef9c5_51abb79fe58b69b811a83a2544b17aa40cbb7e30_0a844428ddeccc950143e1d430d224a2f7872970.jpg",
             "pepper_name": "Cayenne Pepper",
             "heat_range": "30,000 - 50,000"
         }
@@ -43,7 +43,7 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 5,
         "fields": {
-            "image": "img/chili.png",
+            "image": "https://hattiesgarden.com/czech-black-hot-pepper/pepper_czech_black/",
             "pepper_name": "Thai Pepper",
             "heat_range": "50,000 - 100,000"
         }
@@ -53,7 +53,7 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 6,
         "fields": {
-            "image": "img/chili.png",
+            "image": "https://s3.amazonaws.com/pickacarrot2/johnny_seeds/505188a2e2fd6a04135601b8053a338dc3cf395b_6183e4c58c55b609d8bd328885e2dd3400764b59_046fbe5538ed93d2dee15e7e9e4e3bbca0b23c71.jpg",
             "pepper_name": "Habanero Pepper",
             "heat_range": "100,000 - 350,000"
         }
@@ -63,7 +63,7 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 7,
         "fields": {
-            "image": "img/chili.png",
+            "image": "https://images.homedepot-static.com/productImages/b9285929-cb16-41ac-9eb4-07a94460b2d7/svn/bonnie-plants-vegetable-plants-3150-64_1000.jpg",
             "pepper_name": "Ghost Pepper",
             "heat_range": "855,000 - 1,041,427"
         }
@@ -73,7 +73,7 @@
         "model": "scovilleapp.ScovilleScale",
         "pk": 8,
         "fields": {
-            "image": "img/chili.png",
+            "image": "https://i.etsystatic.com/8657432/r/il/019bc6/908313432/il_794xN.908313432_kutf.jpg",
             "pepper_name": "Carolina Reaper Pepper",
             "heat_range": "1,400,000 - 2,200,000"
         }

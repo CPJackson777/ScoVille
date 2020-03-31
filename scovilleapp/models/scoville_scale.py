@@ -3,7 +3,7 @@ from django.urls import reverse
 
 class ScovilleScale(models.Model):
 
-    image = models.FilePathField(path="/img")
+    image = models.CharField(max_length=1000)
     pepper_name = models.CharField(max_length=100)
     heat_range = models.CharField(max_length=100)
 

@@ -1,0 +1,21 @@
+h2, h3, p {
+    color: white;
+}
+
+.blogpost {
+    min-width: 500px;
+    max-width: 1000px;
+    margin: 10px; 
+    box-shadow: 0 4px 4px 0 rgba(0,0,0,0.2);
+    border-radius: 10px; /* rounded corners */
+}
+
+.blogpost_detail {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    /* align-items: flex-end; */
+}

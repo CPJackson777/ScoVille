@@ -1,22 +1,25 @@
 {% extends 'shared/base.html' %}
 {% load static %}
-
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/blogpost.css' %}" type="text/css" media="screen" />
+{% endblock %}
 {% block content%}
 
 
     <h1>Spicy Experiences</h1>
     {% if scoville_scale_id is not None %}
-    <a href="{% url 'scovilleapp:blogpost_form' scoville_scale_id %}">Tell Us About Your Experience</a>
+    <a href="{% url 'scovilleapp:blogpost_form' scoville_scale_id %}" class="btn btn-primary">Tell Us About Your Experience</a>
     {% else %}
-    <a href="{% url 'scovilleapp:blogpost_form' %}">Tell Us About Your Experience</a>
+    <a href="{% url 'scovilleapp:blogpost_form' %}" class="btn btn-primary ">Tell Us About Your Experience</a>
     {% endif %}
     
+
     <div class="all_blogposts">
-    {% for blogpost in all_blogposts %}
-    <div class="col-md-4">
-        <div class="card mb-2">
-            <img class="card-img-top" src="{% static blogpost.image %}">
-            <div class="card-body">
+    {% for blogpost in all_blogposts %} 
+    <div class="whitebg">
+       
+            <img class="cardtop" src="{{ blogpost.blog_image }}">
+            <div class="cardtext">
                 <h5 class="card-title">{{ blogpost.title }}</h5>
                 <p class="card-text">{{ blogpost.snippet }}</p>
                 <p class="card-text">{{ blogpost.scoville_scale.pepper_name }}</p>
@@ -25,7 +28,7 @@
                     Read More
                 </a>
             </div>
-        </div>
+        
     </div>
     {% endfor %}
     </div>

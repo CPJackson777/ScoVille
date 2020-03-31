@@ -30,8 +30,8 @@ def blogpost_edit_form(request, blogpost_id):
         
         template = 'blog_post/blogpost_form.html'
         context = {
-            'blogpost': blogpost,
-            'scales': scales
+            'blogpost': blogpost, #'taco': variable on line 28
+            'scales': scales #'taco': variable on line 13 / tells template what context to present itself in and/or what content it has access to
         }
         print('blogpost', blogpost)
         return render(request, template, context)
