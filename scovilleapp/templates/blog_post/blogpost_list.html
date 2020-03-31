@@ -17,7 +17,7 @@
     <div class="all_blogposts">
     {% for blogpost in all_blogposts %} 
     <div class="whitebg">
-        {% comment %} <div class="cardborder"> {% endcomment %}
+       
             <img class="cardtop" src="{{ blogpost.blog_image }}">
             <div class="cardtext">
                 <h5 class="card-title">{{ blogpost.title }}</h5>
@@ -28,7 +28,7 @@
                     Read More
                 </a>
             </div>
-        {% comment %} </div> {% endcomment %}
+        
     </div>
     {% endfor %}
     </div>

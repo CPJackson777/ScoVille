@@ -1,7 +1,12 @@
 {% extends 'shared/base.html' %}
+{% load static%}
+{% block css %}
+<link rel="stylesheet" href="{% static 'styles/login.css' %}" type="text/css" media="screen" />
+{% endblock %}
+
 {% block content %}
 
-<div class="add-edit-form">
+<div class="form">
 <h2>Welcome!</h2>
  <form method="post">
     {% csrf_token %}

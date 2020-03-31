@@ -13,22 +13,22 @@
         {% comment %} <iframe width="560" height="315" src="{{blogpost.video}} frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe> {% endcomment %}
         <p>{{ blogpost.created_on }}</p>
     </div>
-
+<div class="buttons">
     {% if blogpost.author_id == request.user.id %}
     <form action="{% url 'scovilleapp:blogpost' blogpost.id %}" method="POST">
     {% csrf_token %}
     <input type="hidden" name="actual_method" value="DELETE">
-    <button>Delete</button>
+    <button class="btn btn-primary">Delete</button>
     </form>
 
     <form action="{% url 'scovilleapp:blogpost_edit_form' blogpost.id %}" method="GET">
             {% csrf_token %}
-            <button>Edit</button>
+            <button class="btn btn-primary">Edit</button>
     </form>
     {% else%}
-    <div> You are not authorized to edit or delete this post. </div>
+    <div> <p>You are not authorized to edit or delete this post.</p> </div>
     {% endif %}
-
+</div>
     
 </div>
 {% endblock %}
