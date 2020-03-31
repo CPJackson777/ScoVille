@@ -17,5 +17,5 @@ h2, h3, p {
 
 .buttons {
     display: flex;
-    align-items: flex-end;
+    /* align-items: flex-end; */
 }
