@@ -11,8 +11,8 @@
 
 * Or create your Windows virtual environment in Command Line:
 
-  * `python -m venv scovillenv`
-  * `source ./scovillenv/Scripts/activate`
+  * `python -m venv scovilleenv`
+  * `source ./scovilleenv/Scripts/activate`
 
 * Install the app's dependencies:
 
