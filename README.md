@@ -30,7 +30,7 @@
 
   *`winpty python manage.py createsuperuser`
 
-* Populate your database with initial data from fixtures files: (_NOTE: every time you run this it will remove existing data and repopulate it) 
+* Populate your database with initial data from fixtures files: (NOTE: every time you run this it will remove existing data and repopulate it) 
 
   * `python manage.py loaddata scoville_scales`
   * `python manage.py loaddata blog_posts`
