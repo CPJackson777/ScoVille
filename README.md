@@ -26,7 +26,7 @@
 * Create a superuser for your local version of the app:
 
   * `python manage.py createsuperuser`
-* If you get this message `Superuser creation skipped due to not running in a TTY. You can run `manage.py createsuperuser` in your project to create one manually.`
+* If you get this message: `Superuser creation skipped due to not running in a TTY. You can run `manage.py createsuperuser` in your project to create one manually.`
 
   *`winpty python manage.py createsuperuser`
 
